@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrate Atando libros sueltos</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+  <style>
+    /* ── Formulario ── */
+    .registro-section {
+      max-width: 680px;
+      margin: 2.5rem auto;
+      padding: 0 1.5rem 3rem;
+    }
+
+    .registro-section h2 {
+      font-family: "Poppins", sans-serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 0.4rem;
+      text-align: left;
+    }
+
+    .registro-subtitulo {
+      font-family: "Poppins", sans-serif;
+      font-size: 13px;
+      color: #888780;
+      margin-bottom: 2rem;
+    }
+
+    .form-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    }
+
+    .form-grupo {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1.2rem;
+    }
+
+    .form-grupo label {
+      font-family: "Poppins", sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      color: #5f5e5a;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      margin-bottom: 6px;
+    }
+
+    .form-grupo input,
+    .form-grupo select,
+    .form-grupo textarea {
+      font-family: "Poppins", sans-serif;
+      font-size: 13px;
+      color: #1a1a1a;
+      background: #faf8f4;
+      border: 1px solid #e0ddd6;
+      border-radius: 8px;
+      padding: 10px 14px;
+      transition: border-color 0.2s;
+      outline: none;
+    }
+
+    .form-grupo input:focus,
+    .form-grupo select:focus,
+    .form-grupo textarea:focus {
+      border-color: darkorange;
+      background: #fff;
+    }
+
+    .form-grupo textarea {
+      resize: vertical;
+      min-height: 90px;
+    }
+
+    .form-fila {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    /* Checkboxes géneros */
+    .form-grupo-check label.label-titulo {
+      font-family: "Poppins", sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      color: #5f5e5a;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .check-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+
+    .check-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: "Poppins", sans-serif;
+      font-size: 13px;
+      color: #1a1a1a;
+      cursor: pointer;
+    }
+
+    .check-item input[type="checkbox"] {
+      accent-color: darkorange;
+      width: 15px;
+      height: 15px;
+      cursor: pointer;
+    }
+
+    .form-divider {
+      height: 0.5px;
+      background: #e0ddd6;
+      margin: 1.5rem 0;
+    }
+
+    .btn-registrar {
+      display: block;
+      width: 100%;
+      font-family: "Poppins", sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: white;
+      background-color: darkorange;
+      border: none;
+      border-radius: 20px;
+      padding: 12px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+      margin-top: 1.5rem;
+    }
+
+    .btn-registrar:hover {
+      background-color: #cc6600;
+    }
+
+    @media (max-width: 600px) {
+      .form-fila { grid-template-columns: 1fr; }
+      .check-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>ATANDO LIBROS SUELTOS</h1>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="#">Entrevistas</a></li>
+    <li><a href="#">Agenda</a></li>
+    <li><a href="#">Novedades</a></li>
+    <li><a href="#">Lecturas</a></li>
+    <li><a href="registro.html">Registrate</a></li>
+    <li><a href="#">Contacto</a></li>
+  </ul>
+</nav>
+
+<main>
+  <div class="registro-section">
+    <h2>Sumate al club</h2>
+    <p class="registro-subtitulo">Completá el formulario y te contactamos para darte la bienvenida.</p>
+
+    <div class="form-card">
+    <form action="https://formspree.io/f/mvzygqlz" method="post">
+    </form>
+      <div class="form-fila">
+        <div class="form-grupo">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" />
+        </div>
+
+        </form>
+        <div class="form-grupo">
+          <label for="apellido">Apellido</label>
+          <input type="text" id="apellido" name="apellido" placeholder="Tu apellido" />
+        </div>
+      </div>
+
+      <div class="form-fila">
+        <div class="form-grupo">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="tu@email.com" />
+        </div>
+        <div class="form-grupo">
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" placeholder="11 1234-5678" />
+        </div>
+      </div>
+
+      <div class="form-divider"></div>
+
+      <div class="form-grupo">
+        <label for="libros_mes">¿Cuántos libros leés por mes?</label>
+        <select id="libros_mes" name="libros_mes">
+          <option value="" disabled selected>Seleccioná una opción</option>
+          <option value="menos1">Menos de 1</option>
+          <option value="1">1 libro</option>
+          <option value="2-3">2 a 3 libros</option>
+          <option value="4-5">4 a 5 libros</option>
+          <option value="mas5">Más de 5</option>
+        </select>
+      </div>
+
+      <div class="form-grupo">
+        <label for="autores">Autores y autoras favoritas</label>
+        <input type="text" id="autores" name="autores" placeholder="Ej: Borges, Woolf, García Márquez..." />
+      </div>
+
+      <div class="form-divider"></div>
+
+      <div class="form-grupo-check">
+        <label class="label-titulo">Géneros literarios favoritos</label>
+        <div class="check-grid">
+          <label class="check-item"><input type="checkbox" name="genero" value="ficcion"> Ficción</label>
+          <label class="check-item"><input type="checkbox" name="genero" value="ciencia_ficcion"> Ciencia ficción</label>
+          <label class="check-item"><input type="checkbox" name="genero" value="fantasia"> Fantasía</label>
+          <label class="check-item"><input type="checkbox" name="genero" value="policial"> Policial</label>
+          <label class="check-item"><input type="checkbox" name="genero" value="ensayo"> Ensayo</label>
+          <label class="check-item"><input type="checkbox" name="genero" value="poesia"> Poesía</label>
+          <label class="check-item"><input type="checkbox" name="genero" value="historica"> Novela histórica</label>
+          <label class="check-item"><input type="checkbox" name="genero" value="biografia"> Biografía</label>
+          <label class="check-item"><input type="checkbox" name="genero" value="infantil"> Literatura infantil</label>
+        </div>
+      </div>
+
+      <div class="form-divider"></div>
+
+      <div class="form-grupo">
+        <label for="como_conociste">¿Cómo nos conociste?</label>
+        <select id="como_conociste" name="como_conociste">
+          <option value="" disabled selected>Seleccioná una opción</option>
+          <option value="instagram">Instagram</option>
+          <option value="facebook">Facebook</option>
+          <option value="amigo">Por un amigo o amiga</option>
+          <option value="busqueda">Búsqueda en internet</option>
+          <option value="otro">Otro</option>
+        </select>
+      </div>
+
+      <button class="btn-registrar">Quiero unirme al club</button>
+
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-columna">
+      <h3>Atando libros sueltos</h3>
+      <p>"Un espacio para leer, compartir y descubrir."</p>
+    </div>
+    <div class="footer-columna">
+      <h3>Links rápidos</h3>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="#">Agenda</a></li>
+        <li><a href="#">Lecturas</a></li>
+        <li><a href="registro.html">Registrate</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="footer-columna">
+      <h3>Contacto</h3>
+      <p><i class="ti ti-mail"></i> atandolibros@gmail.com</p>
+      <p><i class="ti ti-phone"></i> 11 1234-5678</p>
+    </div>
+    <div class="footer-columna">
+      <h3>Seguinos</h3>
+      <div class="footer-redes">
+        <a href="#"><i class="ti ti-brand-instagram"></i> Instagram</a>
+        <a href="#"><i class="ti ti-brand-facebook"></i> Facebook</a>
+        <a href="#"><i class="ti ti-brand-youtube"></i> YouTube</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copy">
+    <p>© 2026 Atando libros sueltos. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+</body>
+</html>

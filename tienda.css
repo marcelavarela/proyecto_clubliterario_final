@@ -1,0 +1,549 @@
+/* =============================================
+   CLUB LITERARIO — Tienda de libros usados
+   tienda.css
+   ============================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  background: #FDF6EE;
+  color: #3D2B1A;
+}
+
+/* ---- Paleta de colores ---- */
+:root {
+  --bg:           #FDF6EE;
+  --card:         #FFF9F3;
+  --accent:       #C2692A;
+  --accent-light: #FAEEDE;
+  --accent-dark:  #8B4513;
+  --border:       #E8D5BC;
+  --text:         #3D2B1A;
+  --muted:        #8C6A4E;
+  --success:      #4A7C59;
+}
+
+/* ---- Contenedor general ---- */
+.shop-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* ---- Encabezado ---- */
+.shop-title {
+  font-size: 28px;
+  font-weight: normal;
+  color: var(--text);
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+.shop-subtitle {
+  text-align: center;
+  font-size: 14px;
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+/* ---- Filtros ---- */
+.filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.filter-btn {
+  padding: 6px 16px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--muted);
+  font-size: 13px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.filter-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.filter-btn.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+/* ---- Layout grilla + carrito ---- */
+.shop-layout {
+  display: grid;
+  grid-template-columns: 1fr 290px;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+/* ---- Grilla de libros ---- */
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
+  gap: 14px;
+}
+
+/* ---- Tarjeta de libro ---- */
+.book-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.book-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 2px 8px rgba(194, 105, 42, 0.1);
+}
+
+/* ---- Portada ---- */
+.book-cover {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  border-radius: 6px;
+  background: var(--accent-light);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.book-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.book-cover-placeholder {
+  font-size: 12px;
+  color: var(--muted);
+  text-align: center;
+  padding: 8px;
+  font-style: italic;
+}
+
+/* ---- Info del libro ---- */
+.book-cat {
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  background: var(--accent-light);
+  color: var(--accent-dark);
+  display: inline-block;
+  width: fit-content;
+  font-family: Arial, sans-serif;
+}
+
+.book-title {
+  font-size: 13px;
+  font-weight: bold;
+  color: var(--text);
+  line-height: 1.3;
+}
+
+.book-author {
+  font-size: 12px;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.book-condition {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.book-price {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--accent);
+  margin-top: 2px;
+}
+
+/* ---- Botón agregar ---- */
+.add-btn {
+  margin-top: auto;
+  padding: 8px;
+  background: transparent;
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  color: var(--accent);
+  font-size: 13px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.add-btn:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+.add-btn.in-cart {
+  background: var(--accent-light);
+  border-color: var(--accent-light);
+  color: var(--accent-dark);
+  cursor: default;
+}
+
+/* ---- Panel del carrito ---- */
+.cart-panel {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem;
+  position: sticky;
+  top: 1.5rem;
+}
+
+.cart-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+.cart-title {
+  font-size: 15px;
+  font-weight: bold;
+  color: var(--text);
+}
+
+.cart-count {
+  background: var(--accent);
+  color: #fff;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 60px;
+}
+
+.cart-empty {
+  font-size: 13px;
+  color: var(--muted);
+  text-align: center;
+  padding: 1rem 0;
+  font-style: italic;
+}
+
+/* ---- Item en el carrito ---- */
+.cart-item {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.cart-item-info {
+  flex: 1;
+}
+
+.cart-item-title {
+  font-size: 13px;
+  color: var(--text);
+  font-weight: bold;
+  line-height: 1.3;
+}
+
+.cart-item-price {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* ---- Controles de cantidad ---- */
+.qty-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 5px;
+}
+
+.qty-btn {
+  width: 24px;
+  height: 24px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+  transition: all 0.1s;
+  line-height: 1;
+}
+
+.qty-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.qty-display {
+  font-size: 14px;
+  min-width: 20px;
+  text-align: center;
+  color: var(--text);
+  font-weight: bold;
+}
+
+.remove-btn {
+  background: transparent;
+  border: none;
+  color: #ccc;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 0 2px;
+  transition: color 0.1s;
+  line-height: 1;
+}
+
+.remove-btn:hover {
+  color: #cc2200;
+}
+
+/* ---- Totales ---- */
+.cart-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 14px 0;
+}
+
+.cart-total-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.cart-total-row.bold {
+  font-weight: bold;
+  font-size: 15px;
+  margin-top: 4px;
+}
+
+.envio-gratis {
+  color: var(--success);
+}
+
+/* ---- Botón confirmar ---- */
+.checkout-btn {
+  width: 100%;
+  padding: 11px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  cursor: pointer;
+  margin-top: 12px;
+  transition: background 0.15s;
+}
+
+.checkout-btn:hover {
+  background: var(--accent-dark);
+}
+
+.checkout-btn:disabled {
+  background: var(--border);
+  color: var(--muted);
+  cursor: default;
+}
+
+/* ---- Modal ---- */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(60, 30, 10, 0.5);
+  z-index: 100;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-overlay.open {
+  display: flex;
+}
+
+.modal-box {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 440px;
+  position: relative;
+}
+
+.close-modal {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: var(--muted);
+  line-height: 1;
+}
+
+.close-modal:hover {
+  color: var(--text);
+}
+
+.modal-title {
+  font-size: 20px;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.modal-sub {
+  font-size: 13px;
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: 1.25rem;
+}
+
+.order-summary-mini {
+  background: var(--accent-light);
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-bottom: 1rem;
+  font-size: 13px;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* ---- Formulario ---- */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  font-size: 13px;
+  color: var(--muted);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 9px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--text);
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.form-input:focus {
+  border-color: var(--accent);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 11px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  cursor: pointer;
+  margin-top: 4px;
+  transition: background 0.15s;
+}
+
+.submit-btn:hover {
+  background: var(--accent-dark);
+}
+
+/* ---- Mensaje de éxito ---- */
+.success-msg {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.success-icon {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.success-msg h3 {
+  font-size: 20px;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.success-msg p {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* ---- Sin resultados ---- */
+.no-results {
+  text-align: center;
+  padding: 2rem;
+  color: var(--muted);
+  font-size: 14px;
+  font-style: italic;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 700px) {
+  .shop-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .cart-panel {
+    position: static;
+  }
+
+  .books-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Librería del Club Literario</title>
+  <link rel="stylesheet" href="tienda.css">
+</head>
+<body>
+
+  <div class="shop-wrapper">
+    <h1 class="shop-title">Librería del Club</h1>
+    <p class="shop-subtitle">Libros usados con historia · entrega a domicilio en La Plata</p>
+
+    <!-- Filtros por categoría -->
+    <div class="filters" id="filters">
+      <button class="filter-btn active" data-cat="todos">Todos</button>
+      <button class="filter-btn" data-cat="novela">Novela</button>
+      <button class="filter-btn" data-cat="poesía">Poesía</button>
+      <button class="filter-btn" data-cat="ensayo">Ensayo</button>
+      <button class="filter-btn" data-cat="cuento">Cuento</button>
+      <button class="filter-btn" data-cat="teatro">Teatro</button>
+    </div>
+
+    <!-- Grilla de libros + carrito -->
+    <div class="shop-layout">
+      <div class="books-grid" id="booksGrid"></div>
+
+      <aside class="cart-panel">
+        <div class="cart-header">
+          <span class="cart-title">🛒 Carrito</span>
+          <span class="cart-count" id="cartCount">0</span>
+        </div>
+        <div class="cart-items" id="cartItems">
+          <p class="cart-empty">Tu carrito está vacío</p>
+        </div>
+        <hr class="cart-divider">
+        <div class="cart-total-row"><span>Subtotal</span><span id="subtotal">$0</span></div>
+        <div class="cart-total-row"><span>Envío (La Plata)</span><span class="envio-gratis">Gratis</span></div>
+        <div class="cart-total-row bold"><span>Total</span><span id="totalAmt">$0</span></div>
+        <button class="checkout-btn" id="checkoutBtn" disabled>Confirmar pedido</button>
+      </aside>
+    </div>
+  </div>
+
+  <!-- Modal de contacto -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-box">
+      <button class="close-modal" id="closeModalBtn" aria-label="Cerrar">×</button>
+      <div id="modalContent">
+        <p class="modal-title">Completá tu pedido</p>
+        <p class="modal-sub">Te contactamos para coordinar la entrega</p>
+        <div class="order-summary-mini" id="orderSummaryMini"></div>
+        <div class="form-group">
+          <label class="form-label">Nombre completo</label>
+          <input class="form-input" id="fName" type="text" placeholder="Ana García">
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Teléfono</label>
+            <input class="form-input" id="fPhone" type="tel" placeholder="221 555-0100">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email</label>
+            <input class="form-input" id="fEmail" type="email" placeholder="ana@mail.com">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Dirección de entrega</label>
+          <input class="form-input" id="fAddr" type="text" placeholder="Calle 7 n° 320, La Plata">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Aclaraciones (opcional)</label>
+          <input class="form-input" id="fNotes" type="text" placeholder="Horario preferido, piso/depto…">
+        </div>
+        <button class="submit-btn" id="submitBtn">Enviar pedido</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="tienda.js"></script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club literario "Atando libros sueltos"</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+</head>
+<body>
+
+<header>
+ <h1>ATANDO LIBROS SUELTOS</h1>
+</header>
+<nav>
+    <input type="checkbox" id="menu-toggle" class="menu-checkbox" aria-label="Abrir menú de navegación">
+    
+    <label for="menu-toggle" class="menu-icono">
+        <i class="ti ti-menu-2"></i>
+    </label>
+
+    <div class="menu-container">
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Entrevistas</a></li>
+            <li><a href="#">Agenda</a></li>
+            <li><a href="#">Novedades</a></li>
+            <li><a href="#">Lecturas</a></li>
+            <li><a href="registro.html">Registrate</a></li>
+            <li><a href="tienda.html">Tienda</a></li>
+        </ul>
+    </div>
+</nav>
+<main>
+  <div class="cards-container">
+
+    <div class="card">
+      <div class="card-image">
+        <img src="libro_card1.png" alt="Libro abierto">
+      </div>
+      <div class="card-body">
+        <span class="card-category">Ficción-Próxima reunión</span>
+        <h3>Lo maravilloso en la literatura</h3>
+        <p>Te invitamos a explorar esos territorios donde los espejos hablan, los jardines son infinitos y el tiempo se detiene. Un espacio para desarmar la lógica y redescubrir la capacidad de asombro que la literatura nos devuelve en cada página. Debate abierto, lectura de fragmentos clave y análisis de autores fundamentales.</p>
+        <a href="#">Más información</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-image">
+      <img src="aldiss.avif" alt="Brian Aldiss">
+</div>
+     <div class="card-body">
+        <span class="card-category">El escritor del mes</span>
+        <h3>Brian Aldiss</h3>
+        <p>Uno de los pilares de la Nueva Ola de la ciencia ficción, Aldiss transformó el género mediante una prosa experimental y una profunda carga filosófica. Obras maestras como la trilogía de Heliconia y el relato "Los superjuguetes duran todo el verano" lo hicieron reconocido a nivel mundial.</p>
+        <a href="#">Más información</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-image">
+         <img src="res_card.jpg" alt="Escritura de reseñas">
+      </div>
+      <div class="card-body">
+        <span class="card-category">Reseñas literarias</span>
+        <h3>La clase de griego</h3>
+        <p>Esta semana Pasticheliterario nos reseña La clase de griego una novela de la escritora surcoreana Han Kang, Premio Nobel de Literatura 2024. Publicado originalmente en Corea del Sur el 10 de noviembre de 2011, en 2023 el libro fue publicado en español por la editorial Random House, traducido por Sunme Yoon.  .</p>
+        <a href="#">Más información</a>
+      </div>
+    </div>
+  </div>
+  <section class="seccion-entrevista">
+
+  <div class="card entrevista-card">
+    <div class="card-body">
+      <span class="card-category">Entrevista de la semana</span>
+      <h3>Martín Kohan en la Feria del Libro</h3>
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/0viJR4m5oNQ?si=K8VqiJM04-Bc07YR"
+          title="Entrevista Martín Kohan"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="card agenda-card">
+    <div class="card-body">
+      <span class="card-category">Próximos encuentros</span>
+      <h3>Agenda del club</h3>
+      <ul class="agenda-lista">
+        <li class="agenda-item">
+          <div class="agenda-fecha">
+            <i class="ti ti-calendar"></i> 24 de mayo
+          </div>
+          <div class="agenda-info">
+            <span class="agenda-titulo">Lo maravilloso en la literatura</span>
+            <span class="agenda-badge badge-presencial">Presencial</span>
+          </div>
+        </li>
+        <li class="agenda-item">
+          <div class="agenda-fecha">
+            <i class="ti ti-calendar"></i> 7 de junio
+          </div>
+          <div class="agenda-info">
+            <span class="agenda-titulo">La clase de griego – Reseña y debate</span>
+            <span class="agenda-badge badge-virtual">Virtual</span>
+          </div>
+        </li>
+        <li class="agenda-item">
+          <div class="agenda-fecha">
+            <i class="ti ti-calendar"></i> 21 de junio
+          </div>
+          <div class="agenda-info">
+            <span class="agenda-titulo">Escritores del Río de la Plata</span>
+            <span class="agenda-badge badge-presencial">Presencial</span>
+          </div>
+        </li>
+      </ul>
+      <a href="#" class="btn-agenda">Ver agenda completa</a>
+    </div>
+  </div>
+
+</section>
+</main>
+<footer>
+  <div class="footer-container">
+
+    <div class="footer-columna">
+      <h3>Atando libros sueltos</h3>
+      <p>"Un espacio para leer, compartir y descubrir."</p>
+    </div>
+
+    <div class="footer-columna">
+      <h3>Links rápidos</h3>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Agenda</a></li>
+        <li><a href="#">Lecturas</a></li>
+        <li><a href="registro.html">Registrate</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </div>
+
+  <div class="footer-columna">
+  <h3>Contacto</h3>
+  <p><i class="ti ti-mail"></i> atandolibros@gmail.com</p>
+  <p><i class="ti ti-phone"></i> 11 1234-5678</p>
+    </div>
+
+    <div class="footer-columna">
+  <h3>Seguinos</h3>
+  <div class="footer-redes">
+    <a href="#"><i class="ti ti-brand-instagram"></i> Instagram</a>
+    <a href="#"><i class="ti ti-brand-facebook"></i> Facebook</a>
+    <a href="#"><i class="ti ti-brand-youtube"></i> YouTube</a>
+  </div>
+</div>
+
+  </div>
+
+  <div class="footer-copy">
+    <p>© 2026 Atando libros sueltos. Todos los derechos reservados.</p>
+  </div>
+</footer>
+</body>
+</html>
